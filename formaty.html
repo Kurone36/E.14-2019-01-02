@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="styl2.css">
+        <title>Formatowanie</title>
+        <script type="text/javascript">
+            function red() {
+                var rozmiar = document.getElementById('rozmiar_tekstu').value;
+                var styl = document.getElementById('wybierz').value;
+                
+                if (styl==="prosty") {
+                    document.getElementById('wynik').style = "color:red; font-size:"+rozmiar+"%";
+                   
+		}
+		else {
+                    document.getElementById('wynik').style = "color:red; font-size:"+rozmiar+"%; font-style: italic;";
+                   		
+                }
+            }
+            
+            function green() {
+                var rozmiar = document.getElementById('rozmiar_tekstu').value;
+                var styl = document.getElementById('wybierz').value;
+                
+                   if (styl==="prosty") {
+                    document.getElementById('wynik').style = "color:green; font-size:"+rozmiar+"%";
+                   
+		}
+		else {
+                    document.getElementById('wynik').style = "color:green; font-size:"+rozmiar+"%; font-style: italic;";
+                   		
+                }
+            }
+            
+            function blue() {
+                var rozmiar = document.getElementById('rozmiar_tekstu').value;
+                var styl = document.getElementById('wybierz').value;
+                
+                   if (styl==="prosty") {
+                    document.getElementById('wynik').style = "color:blue; font-size:"+rozmiar+"%";
+                   
+		}
+		else {
+                    document.getElementById('wynik').style = "color:blue; font-size:"+rozmiar+"%; font-style: italic;";
+                   		
+                }
+            }
+            
+        </script>
+    </head>
+    <body>
+        <section id="baner">
+            <h1>Formatowanie dokumentów HTML</h1>
+        </section>
+        <section id="gl">
+            <h2>Przykład listy - hobby</h2>
+            <ul>
+                <li>muzyka</li>
+                <li>turystyka
+                    <ol>
+                        <li>góry</li>
+                        <li>jeziora</li>
+                        <li>na rowerze</li>
+                    </ol>
+                </li>
+                <li>książki</li>
+            </ul>
+        </section>
+        <section id="gs">
+            <h2>Przykład tabeli - rozkład dnia</h2>
+            <table>
+                <tr>
+                    <th>Pora dnia</th>
+                    <th>Obowiązki</th>
+                </tr>
+                <tr>
+                    <td>rano</td>
+                    <td>nauka</td>
+                </tr>
+                <tr>
+                    <td>południe</td>
+                    <td>zajęcia dodatkowe</td>
+                </tr>
+                <tr>
+                    <td>południe</td>
+                    <td rowspan="2">moje hobby</td>
+                </tr>
+                <tr>
+                    <td>wieczór</td>
+                </tr>
+            </table>
+        </section>
+        <section id="gp">
+            <img alt="technologia web" src="napisy.png">
+        </section>
+        <section id="glowny">
+            <p>Podaj rozmiar tekstu w procentach: <input type="number" id="rozmiar_tekstu">%</p>
+            <p> 
+                <select id="wybierz">
+                    <option>prosty</option>
+                    <option>kursywa</option>
+                </select>
+            </p>
+            <p>Jakim kolorem sformatować tekst? Wybierz przycisk</p>
+            <input type="submit" value="" id="red" onclick="red()">
+            <input type="submit" value="" id="green" onclick="green()">
+            <input type="submit" value="" id="blue" onclick="blue()">
+            <p id="wynik">To jest przykład paragrafu, który może być dowolnie formatowany przez Java Script</p>
+        </section>
+        <section id="stopka">
+            <p>Formatowaniem tekstu zajmował się: <i>01234567890</i></p>
+            <a href="http://formatowanie.pl" target="_blank">Odwiedź także</a>
+        </section>
+        
+        
+    </body>
+</html>
